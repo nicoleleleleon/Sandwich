@@ -46,7 +46,7 @@ public class Split {
 		*/
 		
 		partI("applespineapplesbreadlettustomatobaconmayohambreadcheese");
-		partII("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
+	//	partII("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
 	}
 	public static String removeExcess(String sandwich) {
 		int start = sandwich.indexOf("bread");
@@ -58,10 +58,9 @@ public class Split {
 	
 		public static String partI(String list) {
 		removeExcess(list);
-		System.out.println(Arrays.toString(list.split("bread")));
-		String[] sandwich = list.split("bread");
-		System.out.println(sandwich[1]);
-		return "";
+		System.out.println(list);
+		return"";
+		
 		}
 	//	System.out.println(Arrays.toString("hambreadbreadcheesebread".split("bread")));
 		//String sandwichI = "hambreadbreadcheesebread";
@@ -87,17 +86,17 @@ public class Split {
 		* Again, what if it's a fancy sandwich with multiple pieces of bread?
 
 		*/
-		public static String partII(String list) {
-	System.out.println(Arrays.toString(list.split(" ")));
-	int start = list.indexOf("d");
-	String newlist = list.substring(start+2,list.length());
-	System.out.println(newlist);
-	int end = newlist.indexOf("bread");
-	String finallist = newlist.substring(0, end);
-	System.out.println(Arrays.toString(finallist.split(" ")));
+	//	public static String partII(String list) {
+//	System.out.println(Arrays.toString(list.split(" ")));
+//	int start = list.indexOf("d");
+//	String newlist = list.substring(start+2,list.length());
+//	System.out.println(newlist);
+//	int end = newlist.indexOf("bread");
+//	String finallist = newlist.substring(0, end);
+//	System.out.println(Arrays.toString(finallist.split(" ")));
 
-	return "";
+//	return "";
 	
-		 }
+		// }
 }
 
