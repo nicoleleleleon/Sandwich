@@ -1,3 +1,6 @@
+//SplitString project, directions below, splits strings and finds what's in the middle
+//Nicole Leon, week of 10/29
+
 import java.util.*;
 
 public class Split {
@@ -44,24 +47,24 @@ public class Split {
 		* What if it's a fancy sandwich with multiple pieces of bread?
 
 		*/
-		
 		partI("applespineapplesbreadlettustomatobaconmayohambreadcheese");
-	//	partII("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
+
+		partII("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
 	}
 	public static String removeExcess(String sandwich) {
-		int start = sandwich.indexOf("bread");
-		sandwich = sandwich.substring(start);
-		int end = sandwich.indexOf("d");
+		int start = sandwich.indexOf("d");
+		sandwich = sandwich.substring(start+1);
+		int end = sandwich.indexOf("bread");
 		sandwich = sandwich.substring(0, end);
+		System.out.println(sandwich);
 		return sandwich;
 	}
 	
-		public static String partI(String list) {
+		public static String partI(String list) { //not a fancy sandwich
 		removeExcess(list);
-		System.out.println(list);
 		return"";
-		
 		}
+		
 	//	System.out.println(Arrays.toString("hambreadbreadcheesebread".split("bread")));
 		//String sandwichI = "hambreadbreadcheesebread";
 		//String[] sandwichII = "hambreadbreadcheesebread".split("bread");
@@ -86,17 +89,16 @@ public class Split {
 		* Again, what if it's a fancy sandwich with multiple pieces of bread?
 
 		*/
-	//	public static String partII(String list) {
-//	System.out.println(Arrays.toString(list.split(" ")));
-//	int start = list.indexOf("d");
-//	String newlist = list.substring(start+2,list.length());
-//	System.out.println(newlist);
-//	int end = newlist.indexOf("bread");
-//	String finallist = newlist.substring(0, end);
-//	System.out.println(Arrays.toString(finallist.split(" ")));
-
-//	return "";
-	
-		// }
+	public static String partII(String list) {
+			String newlist = removeExcess(list);
+			String[] array = newlist.split(" ");
+			int size = newlist.split(" ").length;
+			for(int i=0; i < size; i++) {
+				if(array[i]!="bread") {
+					System.out.print((array[i]));
+				}
+			}
+	return "";
+	}		 
 }
 
